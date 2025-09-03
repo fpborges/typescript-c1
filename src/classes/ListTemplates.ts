@@ -1,3 +1,7 @@
+/**
+ * Manages rendering formatted items into an HTML list.
+ * Uses HasFormatter objects to display headings and formatted details.
+ */
 import { HasFormatter } from "../interfaces/HasFormartter.js";
 export class ListTemplate {
 	constructor(private container: HTMLUListElement) {}

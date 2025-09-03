@@ -1,4 +1,7 @@
-//classes
+/**
+ * Represents a payment with recipient, details, and amount.
+ * Implements HasFormatter to provide a formatted string for display.
+ */
 import { HasFormatter } from "../interfaces/HasFormartter.js";
 
 export class Payment implements HasFormatter {

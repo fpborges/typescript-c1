@@ -56,3 +56,22 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value.toUpperCase(), "end");
 });
+let arr = ["test", 25, true];
+arr[0] = false;
+arr[1] = "hello";
+arr = [30, "max", false];
+let tup = ["max", 25, true];
+tup[0] = "fernando";
+tup[1] = 44;
+// tup[0] = false;
+console.log("arr", arr);
+console.log("tup", tup);
+let student = ["chris", 23];
+student.push("chris");
+student.push(23);
+// student.push(true);
+console.log(student);
+student[0] = "max";
+student[1] = 25;
+// student[1] = "hello";
+console.log(...student);
