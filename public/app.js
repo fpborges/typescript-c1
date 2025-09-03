@@ -1,4 +1,23 @@
 import { Invoice } from "./classes/Invoice.js";
+const me = {
+    name: "Fernando",
+    age: 43,
+    speak(myVoice) {
+        console.log(myVoice);
+    },
+    spend(amountValue) {
+        console.log("I spent", amountValue);
+        return amountValue;
+    },
+    skills(...skills) {
+        console.log("My skills are:", skills.join(", "));
+    },
+};
+const greetPerson = (person) => {
+    console.log("Hello", person.name);
+};
+greetPerson(me);
+console.log(me);
 const invOne = new Invoice("mario", "work on the mario website", 250);
 const invTwo = new Invoice("luigi", "work on the luigi website", 300);
 //only allow Invoice objects in the array

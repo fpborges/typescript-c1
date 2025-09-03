@@ -1,5 +1,37 @@
 import { Invoice } from "./classes/Invoice.js";
 
+//interfaces
+interface IsPerson {
+	name: string; //property that is a string
+	age: number; //property that is a number
+	speak(a: string): void; //method that returns nothing
+	spend(a: number): number; //method that returns a number
+	skills(...skills: string[]): void; //method that takes a rest parameter and returns nothing
+}
+
+const me: IsPerson = {
+	name: "Fernando",
+	age: 43,
+	speak(myVoice: string): void {
+		console.log(myVoice);
+	},
+	spend(amountValue: number): number {
+		console.log("I spent", amountValue);
+		return amountValue;
+	},
+	skills(...skills: string[]): void {
+		console.log("My skills are:", skills.join(", "));
+	},
+};
+
+const greetPerson = (person: IsPerson) => {
+	console.log("Hello", person.name);
+};
+
+greetPerson(me);
+
+console.log(me);
+
 const invOne = new Invoice("mario", "work on the mario website", 250);
 const invTwo = new Invoice("luigi", "work on the luigi website", 300);
 
