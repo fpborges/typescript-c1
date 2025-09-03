@@ -1,4 +1,7 @@
 import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/payment.js";
+let docOne;
+let docTwo;
 const me = {
     name: "Fernando",
     age: 43,
@@ -39,5 +42,12 @@ const details = document.querySelector("#details");
 const amount = document.querySelector("#amount");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === "invoice") {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
